@@ -1,0 +1,110 @@
+/* src/components/Maincontent.css */
+
+/* General styles for Maincontent */
+.main-content {
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: var(--background-color); /* Background color based on mode */
+  color: var(--text-color); /* Text color based on mode */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width:  100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width */
+  /* margin-top: 20px; */
+  
+}
+
+/* Heading styles */
+.main-content h1,
+.main-content h2 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  margin-left: 80px;
+}
+
+/* Textarea styles */
+textarea.form-control {
+  width: 90%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical; /* Allow vertical resizing */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box; /* Include padding in width */
+  margin-left: 80px;
+}
+
+textarea.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button styles */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  margin-left: 80px;
+}
+
+.button-group .btn {
+  flex: 1;
+  max-width: calc(50% - 0.5rem); /* Two buttons per row on small screens */
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-group .btn:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Paragraph styles */
+p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-left: 80px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .main-content {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+body.dark-mode textarea.form-control {
+   /* Dark background for textarea */
+  color: #fff; /* Light text color for textarea */
+  border: 1px solid #555; /* Dark border for textarea */
+}
+
+/* Light Mode Styles */
+body.light-mode .main-content {
+  background-color: #f8f9fa; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+body.light-mode textarea.form-control {
+  background-color: #fff; /* White background for textarea */
+  color: #000; /* Dark text color for textarea */
+  border: 1px solid #ccc; /* Light border for textarea */
+}
+body.darkcd-mode textarea.form-control{
+  color: black;
+}
+
+/* Responsive Styles for Medium Screens and Up */
+@media (min-width: 768px) {
+  .button-group .btn {
+    max-width: calc(25% - 0.5rem); /* Four buttons per row on medium screens */
+  }
+}
+
+/* Responsive Styles for Large Screens and Up */
+@media (min-width: 992px) {
+  .main-content {
+    padding: 2rem;
+  }
+}

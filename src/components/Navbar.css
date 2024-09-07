@@ -1,0 +1,90 @@
+/* src/components/Navbar.css */
+
+/* General navbar styles */
+.navbar {
+  width: 100%; /* Ensure full width */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color changes */
+  padding: 0.75rem 1rem; /* Padding inside navbar */
+  box-sizing: border-box; /* Include padding in width */
+}
+.container-fluid{
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Larger font size for brand */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border */
+  outline: none; /* Remove default focus outline */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Dark mode styles */
+body.dark-mode .navbar {
+  background-color: #333; /* Dark background color */
+  color: white; /* Light text color */
+}
+
+body.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Light mode styles */
+body.light-mode .navbar {
+  background-color: #f8f9fa; /* Light background color */
+  color: #000; /* Dark text color */
+}
+
+body.light-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Navbar items */
+.navbar-nav .nav-item .nav-link {
+  color: inherit; /* Inherit color from navbar */
+}
+.navbar .container-fluid .navbar-brand  {
+  color: inherit; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Blue on hover */
+}
+
+/* Switch styles */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push switch to the right */
+}
+
+.form-check .form-check-input {
+  width: 50px; /* Width of the switch */
+  height: 24px; /* Height of the switch */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.form-check .form-check-input:checked {
+  background-color: #007bff; /* Switch color when active */
+}
+
+.form-check .form-check-label {
+  margin-left: 0.5rem; /* Space between switch and label */
+  font-size: 1rem; /* Label font size */
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .navbar-toggler {
+    margin-right: 0.5rem; /* Adjust margin for small screens */
+  }
+  
+  .form-check {
+    margin: 1rem 0; /* Margin on top and bottom for small screens */
+  }
+}
